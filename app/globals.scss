@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.time_line::after {
+    content: "";
+    position: absolute;
+    // border-bottom: #c4c4c4 1px solid;
+    border-bottom: black 1px solid;
+    width: 100%;
+    pointer-events: none;
+    margin-top: 1px;
+    transform: translateX(-40px);
+}
+
+
+.current_time::after {
+    border-color: red !important;
+}
+
+.current_time::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 100%;
+    position: absolute;
+    margin-top: 1px;
+    translate: -40px -50%;
+}
